@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   # form for new note
   get "notes/new", to: "notes#new", as: "new_note"
   
+  
   # show a single note 
   get "notes/:id", to: "notes#show", as: "note"
+
+  delete "notes/:id", to: "notes#delete"
 
   # edit the single note
 

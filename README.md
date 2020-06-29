@@ -34,3 +34,5 @@ Things you may want to cover:
 - delete notes
 
 - sort notes
+
+- logins

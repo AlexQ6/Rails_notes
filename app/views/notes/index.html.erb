@@ -3,5 +3,7 @@
 <% @noteboard.each do |note| %>
   <%= note.title%>
   <%= note.content%>
+  
+  <%= link_to 'Edit', edit_note_path(note) %>
   <br><br>
 <% end %>
