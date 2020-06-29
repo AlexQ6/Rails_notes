@@ -10,13 +10,12 @@ class NotesController < ApplicationController
     puts params
 
     @note = Note.new(strongparams)
-    @note.title = params[:title]
-    @note.content = params[:content]
-
+    # @note.title = params[:title]
+    # @note.content = params[:content]
+    
     @note.save
+    p @note
     redirect_to note_path(@note.id)
-
-
     
     # store the data coming from the form into rails session names notes
     # if session[:notes] == nil
@@ -29,6 +28,7 @@ class NotesController < ApplicationController
   end
 
   def new
+    @note = Note.new
 
   end
 

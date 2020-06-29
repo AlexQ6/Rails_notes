@@ -1,0 +1,16 @@
+<h1> Add a new Note </h1>
+
+<%# action indicates upon submit which route gets exceuted %>
+<form action="<%=notes_path%>" method="POST"> 
+    <input type="hidden" value="<%=form_authenticity_token%>" name="authenticity_token">
+    <label> Title: </label>
+    <input type="text" name="note[title]" ><br><br>
+    <label> Content: </label>
+    <input type="text" name="note[content]" ><br><br>
+    <input type="submit" value="Create">
+</form>
+
+
+
+<%# value="<%= note["title"] %>
+<%# value="<%= note["content"] %>
