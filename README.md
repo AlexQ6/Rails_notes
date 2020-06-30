@@ -25,14 +25,19 @@ Things you may want to cover:
 
 ## Features
 
-- display notes 
+- display notes x
 
-- create notes
+- create notes x
 
-- edit notes
+- edit notes x
 
-- delete notes
+- delete notes x
 
-- sort notes
+- sort notes x
 
-- logins
+- logins - new model - users - username - password (one to many)
+
+- image upload - active storage
+
+
+## Database

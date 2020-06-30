@@ -1,7 +1,9 @@
 class NotesController < ApplicationController
 
   def index
-    @noteboard = Note.all
+    # @noteboard = Note.all
+    @noteboard = params[:method] == 'sort' ? Note.all.order(:title) : Note.all
+    
   
   end
 
@@ -9,10 +11,7 @@ class NotesController < ApplicationController
     puts "------------------"
     puts params
 
-    @note = Note.new(strongparams)
-    # @note.title = params[:title]
-    # @note.content = params[:content]
-    
+    @note = Note.new(strongparams)    
     @note.save
     p @note
     redirect_to note_path(@note.id)
@@ -43,6 +42,10 @@ class NotesController < ApplicationController
   end  
 
   def update
+    @note = Note.find(params[:id])
+    @note.update(strongparams)
+    @note.save
+    redirect_to note_path(@note.id)
 
   end
 
