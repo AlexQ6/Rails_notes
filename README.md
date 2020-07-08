@@ -39,5 +39,7 @@ Things you may want to cover:
 
 - image upload - active storage
 
+- bootstrap
+
 
 ## Database
