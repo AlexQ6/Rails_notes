@@ -1,5 +1,6 @@
 <%= @note.title%>
 <%= @note.content%>
+<%= image_tag @note.picture if @note.picture.attached? %>
 
     
 <%= link_to 'Edit', edit_note_path(@note) %>

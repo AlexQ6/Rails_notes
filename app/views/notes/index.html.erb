@@ -3,6 +3,9 @@
 <% @noteboard.each do |note| %>
   <%= note.title%>
   <%= note.content%>
+  <% if note.picture.attached?%>
+    <%= image_tag note.picture, class: "img_btn"%>
+  <% end %>
   
   <%= link_to 'Edit', edit_note_path(note) %>
   <br><br>

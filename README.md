@@ -35,11 +35,22 @@ Things you may want to cover:
 
 - sort notes x
 
-- logins - new model - users - username - password (one to many)
+- logins - new model - users - username - password (one to many) x
 
-- image upload - active storage
+- image upload - active storage via amazon also heroku??
+  
+- advanced features
+  - search bar
+  - events and countdown
+  - check list
 
 - bootstrap
+
+
+Issues
+
+- User id in create method x
+- image not hosted on aws
 
 
 ## Database

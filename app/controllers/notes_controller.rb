@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :delete]
+  before_action :authorize, only: [:index, :show, :edit, :update, :delete]
   def index
     # @noteboard = Note.all
     @noteboard = params[:method] == 'sort' ? Note.all.order(:title) : Note.all
@@ -13,8 +14,10 @@ class NotesController < ApplicationController
     puts params
 
     @note = Note.new(strongparams)
-    @note.user = User.first    
+    @note.user = current_user
+
     @note.save
+    
     p @note
     redirect_to note_path(@note.id)
     
@@ -39,7 +42,7 @@ class NotesController < ApplicationController
   def update
     
     @note.update(strongparams)
-    @note.save
+    # @note.save
     redirect_to note_path(@note.id)
 
   end
@@ -60,7 +63,7 @@ class NotesController < ApplicationController
   def strongparams
     # par = params.require(:note).permit(:title, :content)
     # par[:user] = User.param[:user]
-    params.require(:note).permit(:title, :content)
+    params.require(:note).permit(:title, :content, :picture)
     
 
   end
