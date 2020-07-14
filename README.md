@@ -40,6 +40,8 @@ Things you may want to cover:
 - image upload - active storage via amazon also heroku??
 
 - different noteboard for every user
+
+- login redirection
   
 - advanced features
   - search bar
@@ -52,7 +54,7 @@ Things you may want to cover:
 Issues
 
 - User id in create method x
-- image not hosted on aws
+- image not hosted on aws x
 
 
 ## Database
