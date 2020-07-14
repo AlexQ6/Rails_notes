@@ -15,7 +15,6 @@ class NotesController < ApplicationController
 
     @note = Note.new(strongparams)
     @note.user = current_user
-
     @note.save
     
     p @note

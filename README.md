@@ -38,6 +38,8 @@ Things you may want to cover:
 - logins - new model - users - username - password (one to many) x
 
 - image upload - active storage via amazon also heroku??
+
+- different noteboard for every user
   
 - advanced features
   - search bar
